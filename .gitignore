@@ -1,0 +1,22 @@
+
+__pycache__/
+*.py[cod]
+
+venv/
+.venv/
+
+.ipynb_checkpoints/
+.env
+
+*.db
+*.sqlite3
+*.csv
+*.gz
+*.log
+
+.DS_Store
+
+# Ignore pretrained embedding files
+*.vec
+*.bin
+*.model

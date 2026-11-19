@@ -1,0 +1,316 @@
+
+/* ==============================
+   GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ==============================
+   HEADER
+================================= */
+
+.header {
+    background: #ffffff;
+    padding: 22px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222b45;
+}
+
+.header h1 span {
+    color: #635bdb;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ==============================
+   HERO SECTION
+================================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 15px 35px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* ==============================
+   CARDS
+================================= */
+
+.analysis-card,
+.result-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.analysis-card h3,
+.result-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   TEXT INPUT
+================================= */
+
+textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+textarea:focus {
+    border-color: #635bdb;
+}
+
+/* ==============================
+   BUTTONS
+================================= */
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+#analyze-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    background: #635bdb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+#analyze-btn:hover {
+    background: #5148c7;
+}
+
+#analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   PREDICTION RESULT
+================================= */
+
+.result-card {
+    margin-top: 25px;
+}
+
+.prediction-result {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.prediction-result p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.prediction-result h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+#sentiment-result.positive {
+    color: #16a34a;
+}
+
+#sentiment-result.negative {
+    color: #dc2626;
+}
+
+#sentiment-result.neutral {
+    color: #d97706;
+}
+
+/* ==============================
+   PROBABILITY BARS
+================================= */
+
+.probability-section h4 {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.probability-item {
+    margin-bottom: 18px;
+}
+
+.probability-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.progress-track {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.progress-bar.negative {
+    background: #ef4444;
+}
+
+.progress-bar.neutral {
+    background: #f59e0b;
+}
+
+.progress-bar.positive {
+    background: #22c55e;
+}
+
+/* ==============================
+   FEEDBACK
+================================= */
+
+.feedback-section {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.feedback-section h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.feedback-section p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.feedback-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.feedback-btn {
+    flex: 1;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.feedback-btn:hover {
+    border-color: #635bdb;
+    color: #635bdb;
+    background: #f5f4ff;
+}
+
+.feedback-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   MESSAGES AND VISIBILITY
+================================= */
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #dc2626;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+#feedback-message {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .analysis-card,
+    .result-card {
+        padding: 20px;
+    }
+
+    .feedback-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "max_vocab_size": 30000,
+    "max_sequence_length": 45,
+    "embedding_dim": 100,
+    "num_classes": 3,
+    "class_mapping": {
+        "0": "Negative",
+        "1": "Neutral",
+        "2": "Positive"
+    },
+    "model_type": "LSTM",
+    "embedding_type": "Twitter GloVe 100d",
+    "lstm_units": 64
+}
